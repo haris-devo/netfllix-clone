@@ -7,7 +7,7 @@ const Landing = () => {
     <>
       <LandingBanner />
       <div className="bg-black min-h-auto  text-white ">
-        <div className="mx-auto w-full  border-b border-b-red-300 py-28">
+        <div className="mx-auto w-full  border-b-8 border-tertiary py-28">
           <div className="flex flex-col md:flex-row justify-between w-3/4 mx-auto">
             <div className="w-full md:w-1/2  flex justify-center  flex-col flex-wrap">
               <h1 className="text-6xl font-bold">Enjoy on your TV.</h1>
@@ -61,7 +61,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="mx-auto w-full border-b border-b-red-300">
+        <div className="mx-auto w-full border-b-8 border-tertiary">
           <div className="flex flex-col md:flex-row justify-between py-16 w-3/4 mx-auto">
             <div className="w-full md:w-1/2">
               <div className="">
@@ -119,7 +119,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="mx-auto w-full  border-b border-b-red-300 py-28">
+        <div className="mx-auto w-full  border-b-8 border-tertiary py-28">
           <div className="flex flex-col md:flex-row justify-between w-3/5 mx-auto">
             <div className="w-full md:w-1/2  flex justify-center  flex-col flex-wrap">
               <h1 className="text-6xl font-bold">Watch everywhere</h1>
@@ -146,7 +146,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="mx-auto w-full border-b border-b-red-300">
+        <div className="mx-auto w-full border-b-8 border-tertiary">
           <div className="flex flex-col md:flex-row justify-between py-16 w-3/4 mx-auto">
             <div className="w-full md:w-1/2">
               <div className="">
@@ -173,7 +173,7 @@ const Landing = () => {
         </div>
 
         {/* Frequently Asked Questions  */}
-        <div className="mx-auto w-full border-b border-b-red-300">
+        <div className="mx-auto w-full border-b-8 border-tertiary">
           <FrequentQues />
         </div>
 
