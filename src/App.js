@@ -1,10 +1,10 @@
-import './App.css';
-import Landing from './pages/Landing';
+import "./App.css"
+import AppRoute from "./routes/AppRoute";
 
 function App() {
   return (
     <div className="App">
-      <Landing />
+      <AppRoute />
     </div>
   );
 }

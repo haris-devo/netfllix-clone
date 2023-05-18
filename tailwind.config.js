@@ -9,6 +9,7 @@ module.exports = {
         'primary': '#E50914',
         'secondary': '#2F2F2F',
         'tertiary': '#2D2D2D',
+        'inputBg':"#333"
       },
       
       height:{

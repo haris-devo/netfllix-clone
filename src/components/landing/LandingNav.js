@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LandingNav = () => {
   return (
@@ -9,16 +10,18 @@ const LandingNav = () => {
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
               alt="Netflix Logo"
-              className="w-52 "
+              className="w-40 "
             />
           </div>
           <div className="w-full flex items-center justify-end">
-            <button className="bg-red-600 text-white px-5 py-2 rounded-md ml-2 text-xl">
-              Sign In
-            </button>
+            <Link to="/login
+            ">
+              <button className="bg-red-600 text-white px-5 py-2 rounded-md ml-2 text-md">
+                Sign In
+              </button>
+            </Link>
           </div>
         </div>
-  
       </div>
     </>
   );

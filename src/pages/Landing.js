@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <>
       <LandingBanner />
-      <div className="bg-black min-h-auto  text-white ">
+      <div className="bg-black min-h-auto  text-white landing ">
         <div className="mx-auto w-full  border-b-8 border-tertiary py-28">
           <div className="flex flex-col md:flex-row justify-between w-3/4 mx-auto">
             <div className="w-full md:w-1/2  flex justify-center  flex-col flex-wrap">

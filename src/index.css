@@ -2,13 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: black;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
+
+@layer base {
+  body {
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    @apply fixed top-0 z-50 px-4 py-2 transition-all
+  }
 }
+
+@layer components {
+  .header-link {
+    @apply text-lg font-light mr-4 cursor-pointer text-[#e5e5e5] transition duration-[.4s];
+  }
+}
+
 
 .hero_banner {
   background: linear-gradient(rgba(0, 0, 0, 0.5),
@@ -17,14 +30,14 @@ body {
   ;
 }
 
-label:after {
+.landing label:after {
   content: '+';
   position: absolute;
   top: .4em;
   right: 1em;
   color: #fff;
   font-size: 1.7em;
-  
+
 }
 
 input:checked+label:after {
