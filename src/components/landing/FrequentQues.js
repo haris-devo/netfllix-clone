@@ -37,25 +37,25 @@ const FrequentQues = () => {
 
   // Using map to render each FAQ item
   return (
-    <div class="accordion flex flex-col items-center justify-center h-full py-20">
+    <div className="accordion flex flex-col items-center justify-center h-full py-20">
       <h1 className="text-5xl my-6 font-bold ">Frequently Asked Questions</h1>
       {faqs.map((faq, index) => (
-        <div class="w-3/5 bg-tertiary mb-2 " key={index}>
+        <div className="w-3/5 bg-tertiary mb-2 " key={index}>
           <input
             type="checkbox"
             name="panel"
             id={`panel-${index + 1}`}
-            class="hidden "
+            className="hidden "
           />
           <label
             for={`panel-${index + 1}`}
-            class="relative block  text-white  shadow p-6 text-2xl font-semibold cursor-pointer"
+            className="relative block  text-white  shadow p-6 text-2xl font-semibold cursor-pointer"
           >
             {faq.question}
           </label>
-          <div class="accordion__content overflow-hidden bg-grey-lighter">
+          <div className="accordion__content overflow-hidden bg-grey-lighter">
             <p
-              class="accordion__body p-6 text-2xl font-normal"
+              className="accordion__body p-6 text-2xl font-normal"
               id={`panel${index + 1}`}
             >
               {faq.answer}
@@ -63,7 +63,7 @@ const FrequentQues = () => {
           </div>
         </div>
       ))}
-      <div class="w-full h-full flex  justify-center items-center ">
+      <div className="w-full h-full flex  justify-center items-center ">
         <div className="text-center text-white ">
           <p className="max-w-full mt-5 text-center text-xl leading-5 ">
             Ready to watch? Enter your email to create or restart your

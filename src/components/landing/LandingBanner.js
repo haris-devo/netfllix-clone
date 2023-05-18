@@ -8,9 +8,9 @@ const LandingBanner = () => {
         <div className="h-full absolute  ">
 
         </div>
-        <div class="w-full h-full  z-20">
+        <div className="w-full h-full  z-20">
           <LandingNav />
-          <div class="w-full h-full flex  justify-center items-center ">
+          <div className="w-full h-full flex  justify-center items-center ">
             <div className="text-center text-white m">
               <p className="mt-1 text-4xl font-extrabold  sm:text-5xl sm:tracking-tight lg:text-6xl">
                 Unlimited movies, TV shows, and more
