@@ -20,6 +20,10 @@
   .header-link {
     @apply text-lg font-light mr-4 cursor-pointer text-[#e5e5e5] transition duration-[.4s];
   }
+
+  .listItem {
+    @apply cursor-pointer
+  }
 }
 
 

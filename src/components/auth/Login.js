@@ -40,17 +40,18 @@ const Login = () => {
                   />
                 </div>
               </div>
-              <div className="w-full flex  justify-center h-full">
-                <div className="flex flex-col justify-center">
+              <div className="w-full flex items-center  justify-center h-full">
+                <div className="flex flex-col items-center justify-center">
                   {/* Sign Up Form  */}
-                  <div className="min-w-[21rem] w-96 h-full mb-60  bg-black bg-opacity-40  flex flex-col  py-12 px-10  text-white">
+                  
+                  <div className="min-w-[21rem] w-96 h-full mb-40  bg-black bg-opacity-40  flex flex-col  py-12 px-10  text-white">
                     <h1 className="text-4xl font-semibold my-5">Sign In</h1>
                     <form
                       className="flex flex-col"
                       action=""
                       onSubmit={handleSubmit}
                     >
-                      <label htmlFor="email" className="text-gray-600">
+                      <label htmlFor="email" className="text-white">
                         Email or phone number
                       </label>
                       <input
@@ -64,7 +65,7 @@ const Login = () => {
                         value={userLogin.email}
                         autoComplete="new-email"
                       />
-                      <label htmlFor="password" className="text-gray-600">
+                      <label htmlFor="password" className="text-white">
                         Password
                       </label>
                       <input

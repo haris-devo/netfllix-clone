@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "./Head";
 import BannerMain from "./BannerMain";
 import requests from "../../utils/Requests";
+import List from "./movieslist/List";
 
 const MainMovies = (props) => {
   const { email } = props;
@@ -10,7 +11,7 @@ const MainMovies = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let [
+        const [
           netflixOriginals,
           trendingNow,
           topRated,
@@ -20,14 +21,14 @@ const MainMovies = (props) => {
           romanceMovies,
           documentaries,
         ] = await Promise.all([
-          fetch(requests.fetchNetflixOriginals).then((res) => res.json()),
-          fetch(requests.fetchTrending).then((res) => res.json()),
-          fetch(requests.fetchTopRated).then((res) => res.json()),
-          fetch(requests.fetchActionMovies).then((res) => res.json()),
-          fetch(requests.fetchComedyMovies).then((res) => res.json()),
-          fetch(requests.fetchHorrorMovies).then((res) => res.json()),
-          fetch(requests.fetchRomanceMovies).then((res) => res.json()),
-          fetch(requests.fetchDocumentaries).then((res) => res.json()),
+          fetch(requests.fetchNetflixOriginals),
+          fetch(requests.fetchTrending),
+          fetch(requests.fetchTopRated),
+          fetch(requests.fetchActionMovies),
+          fetch(requests.fetchComedyMovies),
+          fetch(requests.fetchHorrorMovies),
+          fetch(requests.fetchRomanceMovies),
+          fetch(requests.fetchDocumentaries),
         ]);
 
         setValue([
@@ -39,7 +40,6 @@ const MainMovies = (props) => {
           horrorMovies.results,
           romanceMovies.results,
           documentaries.results,
-          
         ]);
       } catch (error) {
         console.error(error);
@@ -47,25 +47,24 @@ const MainMovies = (props) => {
     };
 
     fetchData();
-  }, [email]);
+  }, []);
 
-  console.log(value)
+  console.log(value);
 
   return (
     <>
-      <div className="h-screen   py-2 text-white relative bg-gradient-to-b from-gray-900/10 to-[#010511] lg:[140vh]">
+      <div className="h-[90vh]   py-2 text-white relative bg-gradient-to-b from-gray-900/10 to-[#010511] lg:[140vh]">
         {/* Navbar Header  */}
         <Head email={email} />
         {/* Navbar Header  */}
 
         {/* Start of main  */}
-        <main>
+        <main className="relative">
           {/* start of main banner  */}
           <BannerMain />
           {/* End of Banner */}
 
-          {/* Display the movies */}
-         
+          
         </main>
 
         {/* End of Main */}
@@ -73,7 +72,12 @@ const MainMovies = (props) => {
         {/* Modal  */}
       </div>
 
-      <div className="">hello</div>
+      <div className=" overflow-hidden">
+        <List />
+        <List />
+        <List />
+        <List />
+      </div>
     </>
   );
 };
