@@ -16,10 +16,9 @@ const AppRoute = () => {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
-        {/* {
+        {
           email =="adil" ? <Route path="/main" element={<MainMovies email={email} />} /> : <Route path="/main" element={<Login />} />
-        } */}
-        <Route path="/main" element={<MainMovies email={email} />} />
+        }
       </Routes>
     </>
   );
