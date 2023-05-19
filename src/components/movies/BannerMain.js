@@ -1,50 +1,59 @@
 import React from "react";
 
+const BASE_URL = "https://image.tmdb.org/t/p/original";
 
-const BannerMain = () => {
+
+const BannerMain = ({ movie }) => {
+
+  // Get the movie's title, release date, vote average, and runtime.
+  const title = movie?.title;
+  const releaseDate = movie?.release_date;
+  const voteAverage = movie?.vote_average;
+  const runtime = movie?.runtime;
+
+  // Get the first 350 characters of the movie's overview.
+  const overview = movie?.overview.substring(0, 350);
+
+
   return (
-    <>
-      <div className="absolute h-[90vh] w-full top-0">
+    <div className="absolute h-[80vh] w-full top-0">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/80 rounded-md"></div>
+      <div className="w-full h-full bg-gradient-to-r from-black/80">
         <img
-          src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-          alt="Banner"
-          className="h-full w-full object-cover"
+          src={`${BASE_URL}${movie?.backdrop_path}`}
+          alt=""
+          className="w-full h-full object-cover bg-gradient-to-t from-black/80"
         />
-        <div className="w-1/2 absolute bottom-16 left-10">
-          <div className="">
-            <img
-              src="https://occ-0-1432-1433.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABUZdeG1DrMstq-YKHZ-dA-cx2uQN_YbCYx7RABDk0y7F8ZK6nzgCz4bp5qJVgMizPbVpIvXrd4xMBQAuNe0xmuW2WjoeGMDn1cFO.webp?r=df1"
-              alt=""
-              className="w-06"
-            />
-            <span className="py-5 px-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              adipisci repellendus eum quasi illo, velit numquam, maxime tempora
-              sint deleniti, aliquid qui? Facilis, adipisci! Ratione hic
-              repudiandae temporibus eum earum?
-            </span>
-            <div className="flex my-2">
-              <button className="py-3 px-5 border-none rounded-md flex items-center justify-center text-xl font-medium cursor-pointer bg-white text-black">
+      </div>
+      <div className="w-1/2 absolute bottom-24 left-20">
+        <div className="pr-24">
+          <h1 className="text-6xl font-bold my-3">{title}</h1>
+          <h3 className="text-lg bg-black/10 inline-block py-2 rounded">
+            {releaseDate} • {voteAverage} • {runtime} min
+          </h3>
+          <div className="py-3 px-0 md:text-2xl">
+            <span>{overview}</span>
+          </div>
+        </div>
+        <div className="flex my-2">
+              <button className="py-3 px-5 border-none rounded flex items-center justify-center text-xl font-medium cursor-pointer bg-white text-black hover:bg-primary hover:text-white">
                 <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
-                    />
-                  </svg>
-                <span className="bg-white text-black ml-3">
-                  
-                  Play
-                </span>
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 "
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+                  />
+                </svg>
+                <span className=" text-black ml-3 hover:bg-primary hover:text-white">Play</span>
               </button>
-              <button className="bg-gray-300 px-4 ml-3 rounded-md flex text-black items-center ">
+              <button className="bg-transparent border  border-gray-300 px-4 ml-3 rounded flex text-white  items-center ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -60,14 +69,11 @@ const BannerMain = () => {
                   />
                 </svg>
 
-                <span className="ml-3">Info</span>
+                <span className="ml-3">Watch Later</span>
               </button>
             </div>
-          </div>
-        </div>
       </div>
-      
-    </>
+    </div>
   );
 };
 

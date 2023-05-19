@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MainMovies from "../movies/MainMovies";
+import MainMovies from "../../pages/MainMovies";
 
 const Login = () => {
   const [userLogin, setUserLogin] = useState({

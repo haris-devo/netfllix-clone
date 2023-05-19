@@ -4,6 +4,8 @@ const Head = (props) => {
 
   const [isScroll, setIsScroll] = useState(false);
 
+  const {email} = props;
+
   useEffect(()=>{
      let handleScroll=() => {
       if (window.scrollY > 10) {
@@ -77,13 +79,15 @@ const Head = (props) => {
                 />
               </svg>
             </div>
-            <div className="account">
+            <div className="account flex items-center justify-center">
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117"
                 alt="Account"
-                className="w-8 h-8 rounded"
+                className="w-8 h-8 rounded mx-4"
               />
-              
+              <h1 className="bg-white text-black font-bold py-2 px-4 rounded ">
+                Welcome {email? email : "User"}
+              </h1>
             </div>
           </div>
         </div>

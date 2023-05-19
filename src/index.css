@@ -18,12 +18,38 @@
 
 @layer components {
   .header-link {
-    @apply text-lg font-light mr-4 cursor-pointer text-[#e5e5e5] transition duration-[.4s];
+    @apply text-xl font-light mr-4 cursor-pointer text-white transition duration-[.4s];
   }
 
   .listItem {
     @apply cursor-pointer
   }
+}
+
+.card-here {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.card-here:hover .card-hover {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-20px);
+
+}
+
+.card-here:hover {
+  transform: scale(1.5);
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
 }
 
 
@@ -33,6 +59,9 @@
     url('https://assets.nflxext.com/ffe/siteui/vlv3/70805ddd-f38c-4e25-94cd-b5015e444ee0/dfb88503-6755-43aa-bdc0-1b119e2b5a20/PK-en-20230508-popsignuptwoweeks-perspective_alpha_website_large.jpg');
   ;
 }
+
+
+
 
 .landing label:after {
   content: '+';

@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Login from "../components/auth/Login";
-import MainMovies from "../components/movies/MainMovies";
+import MainMovies from "../pages/MainMovies";
 import Landing from "../pages/Landing";
 
 

@@ -4,6 +4,7 @@ import LandingNav from "./LandingNav";
 const LandingBanner = () => {
   return (
     <>
+    
       <div className=" h-hero  bg-hero relative bg-blend-overlay hero_banner ">
         <div className="h-full absolute  ">
 
