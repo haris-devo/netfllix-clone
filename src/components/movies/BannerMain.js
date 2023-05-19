@@ -25,7 +25,7 @@ const BannerMain = ({ movie }) => {
           className="w-full h-full object-cover bg-gradient-to-t from-black/80"
         />
       </div>
-      <div className="w-1/2 absolute bottom-24 left-20">
+      <div className="md:w-1/2 absolute bottom-24 left-20">
         <div className="pr-24">
           <h1 className="text-6xl font-bold my-3">{title}</h1>
           <h3 className="text-lg bg-black/10 inline-block py-2 rounded">
