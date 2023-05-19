@@ -6,20 +6,17 @@ const LandingBanner = () => {
     <>
     
       <div className=" h-hero  bg-hero relative bg-blend-overlay hero_banner ">
-        <div className="h-full absolute  ">
-
-        </div>
-        <div className="w-full h-full  z-20">
+        <div className="w-full h-full px-5 md:px-2 z-20">
           <LandingNav />
-          <div className="w-full h-full flex  justify-center items-center ">
+          <div className="w-full h-full flex  justify-center items-center  ">
             <div className="text-center text-white m">
-              <p className="mt-1 text-4xl font-extrabold  sm:text-5xl sm:tracking-tight lg:text-6xl">
+              <p className="mt-1 md:text-4xl text-3xl font-extrabold   sm:tracking-tight lg:text-6xl">
                 Unlimited movies, TV shows, and more
               </p>
-              <p className="max-w-xl mt-5 mx-auto text-2xl font-normal ">
+              <p className="max-w-xl mt-5 mx-auto md:text-2xl font-normal ">
                 Watch anywhere. Cancel anytime
               </p>
-              <p className="max-w-full mt-5 text-center text-xl leading-5 ">
+              <p className="max-w-full mt-5 text-center md:text-xl leading-5 ">
                 Ready to watch? Enter your email to create or restart your
                 membership.
               </p>
@@ -36,7 +33,7 @@ const LandingBanner = () => {
                   className="w-2/3 p-4 bg-black border border-grey-600 rounded opacity-50"
                   placeholder="Email Address"
                 />
-                <button className="bg-red-600 text-white px-5 py-2 rounded-md ml-2 text-xl">
+                <button className="bg-red-600 text-white md:px-5 md:py-2 w-40  rounded-md ml-2 text-xl">
                   Get Started
                 </button>
               </div>

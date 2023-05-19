@@ -1,7 +1,6 @@
+
 import React from "react";
-
 const BASE_URL = "https://image.tmdb.org/t/p/original";
-
 
 const BannerMain = ({ movie }) => {
 
@@ -12,7 +11,11 @@ const BannerMain = ({ movie }) => {
   const runtime = movie?.runtime;
 
   // Get the first 350 characters of the movie's overview.
-  const overview = movie?.overview.substring(0, 350);
+
+  const getTrancate = (overview) => {
+    const num = 20;
+    return (overview?.length < num) ? overview.slice(0, num) + "..." : overview;
+  };
 
 
   return (
@@ -25,17 +28,17 @@ const BannerMain = ({ movie }) => {
           className="w-full h-full object-cover bg-gradient-to-t from-black/80"
         />
       </div>
-      <div className="md:w-1/2 absolute bottom-24 left-20">
+      <div className="md:w-1/2 w-full absolute bottom-24 md:left-20 left-10">
         <div className="pr-24">
-          <h1 className="text-6xl font-bold my-3">{title}</h1>
+          <h1 className="md:text-6xl text-3xl font-bold my-3">{title}</h1>
           <h3 className="text-lg bg-black/10 inline-block py-2 rounded">
             {releaseDate} • {voteAverage} • {runtime} min
           </h3>
           <div className="py-3 px-0 md:text-2xl">
-            <span>{overview}</span>
+            <span>{getTrancate(movie?.overview)}</span>
           </div>
         </div>
-        <div className="flex my-2">
+               <div className="flex my-2">
               <button className="py-3 px-5 border-none rounded flex items-center justify-center text-xl font-medium cursor-pointer bg-white text-black hover:bg-primary hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,6 @@ import ListItem from "./ListItem";
 const List = (props) => {
   const { fetchURL, title } = props;
 
-  console.log(title);
 
   const [movies, setMovies] = useState([]);
 
@@ -31,11 +30,13 @@ const List = (props) => {
     fetchData();
   }, [fetchURL] );
 
+ 
+
 
   return (
     <>
       <div className="w-screen mt-5">
-        <span className="text-white text-2xl font-medium ml-12">{title}</span>
+        <span className="text-white md:text-2xl font-medium ml-12">{title}</span>
         <div className="relative">
           <div
             className=""

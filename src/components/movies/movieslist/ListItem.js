@@ -1,8 +1,30 @@
-import React from "react";
-const BASE_URL = 'https://image.tmdb.org/t/p/original';
+import movieTrailer from "movie-trailer";
+import React, { useState } from "react";
+import Youtube from "react-youtube"
+const BASE_URL = "https://image.tmdb.org/t/p/original";
+
 
 const ListItem = ({ item, index, slideNumber }) => {
-  const itemNumber = slideNumber ;
+  const itemNumber = slideNumber;
+
+
+  const [trailerURL, setTrailerURL] = useState([]);
+
+  const handleClick = (item) => {
+    if (trailerURL) {
+      setTrailerURL("");
+    } else {
+      movieTrailer(item?.title || item?.name || item?.original_name || "")
+        .then((url) => {
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerURL(urlParams.get("v"));
+        })
+        .catch((error) => console.log(error));
+    }
+  };
+
+
+  
 
   return (
     <>
@@ -19,9 +41,7 @@ const ListItem = ({ item, index, slideNumber }) => {
             <div className="flex my-2 justify-center">
               <button
                 className="py-3 px-5 border-none rounded-full flex items-center justify-center text-sm font-medium cursor-pointer bg-white text-black hover:bg-primary"
-                onClick={() => {
-                  console.log("Playing", itemNumber);
-                }}
+                onClick={handleClick}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +78,6 @@ const ListItem = ({ item, index, slideNumber }) => {
                     d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
                   />
                 </svg>
-                
               </button>
             </div>
           </div>

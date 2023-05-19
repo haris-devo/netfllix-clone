@@ -10,8 +10,8 @@ const Landing = () => {
         <div className="mx-auto w-full  border-b-8 border-tertiary py-28">
           <div className="flex flex-col md:flex-row justify-between w-3/4 mx-auto">
             <div className="w-full md:w-1/2  flex justify-center  flex-col flex-wrap">
-              <h1 className="text-4xl lg:text-5xl font-bold">Enjoy on your TV.</h1>
-              <h3 className="pt-7 text-2xl">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">Enjoy on your TV.</h1>
+              <h3 className="pt-7 md:text-2xl">
                 Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
                 Blu-ray players, and more.
               </h3>
@@ -47,7 +47,7 @@ const Landing = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2  flex justify-center  flex-col flex-wrap">
-              <h1 className="text-4xl lg:text-5xl  font-bold">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl  font-bold pt-3 md:pt-0">
                 Download your shows to watch offline
               </h1>
               <h3 className="pt-7 text-2xl">
@@ -59,8 +59,8 @@ const Landing = () => {
         <div className="mx-auto w-full  border-b-8 border-tertiary py-28">
           <div className="flex flex-col md:flex-row justify-between w-3/5 mx-auto">
             <div className="w-full md:w-1/2  flex justify-center  flex-col flex-wrap">
-              <h1 className="text-4xl lg:text-5xl  font-bold">Watch everywhere</h1>
-              <h3 className="pt-7 text-2xl">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl  font-bold pt-3 md:pt-0">Watch everywhere</h1>
+              <h3 className="md:pt-7 py-4 md:text-2xl">
                 Stream unlimited movies and TV shows on your phone, tablet,
                 laptop, and TV.
               </h3>
@@ -96,10 +96,10 @@ const Landing = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2  flex justify-center  flex-col flex-wrap">
-              <h1 className="text-6xl font-bold">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl  font-bold pt-3 md:pt-0">
                 Create profiles for kids
               </h1>
-              <h3 className="pt-7 text-2xl">
+              <h3 className="md:pt-7 md:text-2xl py-3 text-lg">
                 Send kids on adventures with their favorite characters in a space made just for them—free with your membership.
               </h3>
             </div>

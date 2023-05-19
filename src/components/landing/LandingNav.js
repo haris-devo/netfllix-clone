@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LandingNav = () => {
   return (
     <>
-      <div className=" mx-auto w-full px-72 h-20 flex items-center justify-center mt-3">
+      <div className=" mx-auto w-full md:px-72 h-20 flex items-center justify-center mt-3">
         <div className="w-full flex items-center justify-between">
           <div className="w-1/2">
             <img
@@ -16,7 +16,7 @@ const LandingNav = () => {
           <div className="w-full flex items-center justify-end">
             <Link to="/login
             ">
-              <button className="bg-red-600 text-white px-5 py-2 rounded-md ml-2 text-md">
+              <button className="bg-red-600 text-white w-20 md:w-auto py-2 md:px-5 md:py-2 rounded-md ml-2 text-md ">
                 Sign In
               </button>
             </Link>

@@ -38,9 +38,9 @@ const FrequentQues = () => {
   // Using map to render each FAQ item
   return (
     <div className="accordion flex flex-col items-center justify-center h-full py-20">
-      <h1 className="text-5xl my-6 font-bold ">Frequently Asked Questions</h1>
+      <h1 className="md:text-5xl md:my-6 font-bold text-2xl lg:text-5xl pt-3 md:pt-0 pb-6 md:pb-0">Frequently Asked Questions</h1>
       {faqs.map((faq, index) => (
-        <div className="w-3/5 bg-tertiary mb-2 " key={index}>
+        <div className="md:w-3/5 mx-10 md:mx-0 bg-tertiary mb-2 " key={index}>
           <input
             type="checkbox"
             name="panel"
@@ -49,13 +49,13 @@ const FrequentQues = () => {
           />
           <label
             for={`panel-${index + 1}`}
-            className="relative block  text-white  shadow p-6 text-2xl font-semibold cursor-pointer"
+            className="relative block  text-white  shadow md:p-6 p-4 md:text-2xl font-semibold cursor-pointer"
           >
             {faq.question}
           </label>
           <div className="accordion__content overflow-hidden bg-grey-lighter">
             <p
-              className="accordion__body p-6 text-2xl font-normal"
+              className="accordion__body md:p-6 p-4 md:text-2xl  font-normal"
               id={`panel${index + 1}`}
             >
               {faq.answer}
@@ -65,11 +65,11 @@ const FrequentQues = () => {
       ))}
       <div className="w-full h-full flex  justify-center items-center ">
         <div className="text-center text-white ">
-          <p className="max-w-full mt-5 text-center text-xl leading-5 ">
+          <p className="max-w-full mt-5 text-center md:text-xl leading-5 px-3 md:px-3 ">
             Ready to watch? Enter your email to create or restart your
             membership.
           </p>
-          <div className="md:max-w-lg max-w-sm my-10 flex mx-auto">
+          <div className="md:max-w-lg max-w-sm my-10 flex mx-auto px-3">
             <input
               type="text"
               autocomplete="email"
@@ -82,7 +82,7 @@ const FrequentQues = () => {
               className="w-2/3 p-4 bg-black border border-grey-600 rounded opacity-50"
               placeholder="Email Address"
             />
-            <button className="bg-red-600 text-white px-5 py-2 rounded-md ml-2 text-xl">
+            <button className="bg-red-600 text-white md:px-5 py-2 px-2 rounded-md ml-2 text-md">
               Get Started
             </button>
           </div>

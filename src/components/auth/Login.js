@@ -17,6 +17,12 @@ const Login = () => {
     e.preventDefault();
     if (userLogin.email === "adil" && userLogin.password === "123") {
       setShowMain(true);
+
+      // set value in local storage 
+
+      localStorage.setItem("email", userLogin.email);
+      
+
     } else {
       alert("Invalid Credentials");
     }

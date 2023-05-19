@@ -29,11 +29,10 @@ const MainMovies = (props) => {
     fetchDataTrending();
   }, []);
 
-  console.log(trending)
 
   return (
     <>
-      <div className="h-[80vh] mb-10    text-white relative bg-gradient-to-b from-gray-900/10 to-[#010511] lg:[140vh]">
+      <div className="h-[80vh] mb-10     text-white relative bg-gradient-to-b from-gray-900/10 to-[#010511] lg:[140vh]">
         {/* Navbar Header  */}
         <Head email={email} />
         {/* Navbar Header  */}
