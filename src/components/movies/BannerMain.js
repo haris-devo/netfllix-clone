@@ -13,8 +13,8 @@ const BannerMain = ({ movie }) => {
   // Get the first 350 characters of the movie's overview.
 
   const getTrancate = (overview) => {
-    const num = 20;
-    return (overview?.length < num) ? overview.slice(0, num) + "..." : overview;
+    const num = 80;
+    return (overview?.length > num) ? overview.slice(0, num) + "..." : overview;
   };
 
 
@@ -35,7 +35,10 @@ const BannerMain = ({ movie }) => {
             {releaseDate} • {voteAverage} • {runtime} min
           </h3>
           <div className="py-3 px-0 md:text-2xl">
-            <span>{getTrancate(movie?.overview)}</span>
+            <span>{
+              getTrancate(movie?.overview)
+            }
+            </span>
           </div>
         </div>
                <div className="flex my-2">
